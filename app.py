@@ -4,8 +4,7 @@ from PIL import Image
 
 @st.cache_resource
 def load_model():
-    # return YOLO('helmet-model.pt')
-    pass
+    return YOLO('solar.pt')
 model = load_model()
 
 st.set_page_config(page_title="Solar Plate Detection Model", page_icon="🛰️")
@@ -25,4 +24,5 @@ if uploaded is not None:
             st.image(result_img,caption='Detected image',use_container_width=True)
 
         
+
 
